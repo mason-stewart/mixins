@@ -1,3 +1,9 @@
+@mixin button ($color) {
+    border: 1px solid $color;
+    background-color: darken($color, 20%);
+}
+
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5,12 +11,12 @@ body {
 }
 
 .hero-unit {
+    @include button(rgb(232, 2, 76));
     margin: 50px auto 0 auto;
     width: 300px;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;
-    background-color: #eee;
     border-radius: 6px;
     padding: 60px;
     h1 {
