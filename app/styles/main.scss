@@ -4,7 +4,7 @@
 }
 $calloutBG: #EEE;
 $divCenter: 0 auto;
-
+$siteOrange: rgb(242,187,118);
 
 
 body {
@@ -25,6 +25,35 @@ body {
 .callout {
     @include calloutStyle (#ff00ff);
 }
+ // --------- menu -----------
+.menu {
+        ul {
+            margin: 0;
+            padding:0;
+            list-style: none;
+            }
+
+        li {
+        display: inline-block;
+        background-color: $siteOrange;   
+            }
+
+        a {
+        display:block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #000;
+            }
+        }
+
+
+
+
+
+
+
+
+
 
 // .hero-unit {
 //     @include button(rgb(232, 2, 76));
