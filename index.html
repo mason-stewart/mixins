@@ -1,0 +1,16 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>mixins</title><meta name=description content=""><meta name=viewport content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor.css><link rel=stylesheet href=styles/a75121aa.main.css><body><!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--><div class=callout>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, provident dolores veniam expedita dolor facere ab ipsa obcaecati repellat ex reprehenderit sunt magni sequi. Sint, perspiciatis amet quidem tempora animi!</div><code>$calloutBG: #DDD;<br>$divCenter: 0 auto;<br><br>@mixin calloutStyle ($color) {<br>background-color: $calloutBG;<br>border-left: 3px solid $color;<br>width: 500px;<br>margin: $divCenter;<br>padding: 15px;}<br><br>.callout { @include calloutStyle (#ff00ff); }</code><br><br><br><br><div class=menu><ul><li><a href=#>Home</a></li><li><a href=#>About</a></li><li><a href=#>Contact</a></li></ul></div><code>$siteOrange: rgb(242,187,118);<br>.menu {<br>ul {<br>margin: 0;<br>padding:0;<br>list-style: none;<br>}<br><br>li {<br>display: inline-block;<br>background-color: $siteOrange;<br>}<br><br>a {<br>display:block;<br>padding: 5px 10px;<br>text-decoration: none;<br>color: #000;<br>&:hover {<br>background-color: darken($siteOrange, 10%);<br>} } }</code><h1>Big Header</h1><h3>Subtext</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, nobis autem deleniti tenetur provident et.</p><code>#{headings()} { font-family: Arial; color: $siteOrange;}</code> <!-- <div class="hero-unit">
+          <h1>hey this is way easy. Grunt is sooooo nice</h1>
+          <p>You now have</p>
+          <ul>
+            <li>HTML5 Boilerplate</li>
+            <li>Sass with Compass</li>
+
+          </ul>
+        </div> --><script src=scripts/78921647.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/b6c3df09.main.js></script>
