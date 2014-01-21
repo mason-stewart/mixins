@@ -24,8 +24,28 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="callout">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, provident dolores veniam expedita dolor facere ab ipsa obcaecati repellat ex reprehenderit sunt magni sequi. Sint, perspiciatis amet quidem tempora animi!
+        </div>
+        
+        <code>
+            $calloutBG: #DDD;<br>
+            $divCenter: 0 auto;<br><br>
 
-        <div class="hero-unit">
+            @mixin calloutStyle ($color) {<br>
+            background-color: $calloutBG;<br>
+            border-left: 3px solid $color;<br>
+            width: 500px;<br>
+            margin: $divCenter;<br>
+            padding: 15px;}<br>
+            <br>
+            .callout {
+            @include calloutStyle (#ff00ff);
+            }
+        </code>
+
+
+        <!-- <div class="hero-unit">
           <h1>hey this is way easy. Grunt is sooooo nice</h1>
           <p>You now have</p>
           <ul>
@@ -33,7 +53,7 @@
             <li>Sass with Compass</li>
 
           </ul>
-        </div>
+        </div> -->
 
 
         <!-- build:js scripts/vendor.js -->
