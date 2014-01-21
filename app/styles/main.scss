@@ -51,7 +51,10 @@ body {
             }
         }
 
-
+#{headings()} {
+    font-family: Arial;
+    color: $siteOrange;
+}
 
 
 
