@@ -66,7 +66,30 @@
 <div class="blue-header">
     Header Section Two
 </div>
+<pre>
+    @mixin header ($color, $font)  {
+    height:75px;
+    width:0 auto;
+    background-color: lighten($color, 30%);
+    font-size: 25px;
+    font-family: $font;
+    text-align: center;
+    line-height: 75px;
+    font-color:#fff;
+    border-bottom: 4px solid darken($color, 20%);
+    margin-bottom:10px;
+    color: lighten($color, 70%);
+    text-shadow: 1px 1px 1px #222;
+}
 
+.red-header {
+    @include header(#B22222, serif)
+}
+.blue-header {
+    @include header(#4682B4, sans-serif)
+}
+    
+</pre>
 
         <!-- <div class="hero-unit">
           <h1>hey this is way easy. Grunt is sooooo nice</h1>
