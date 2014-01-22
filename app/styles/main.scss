@@ -1,60 +1,70 @@
-@mixin button ($color) {
-    border: 1px solid $color;
-    background-color: darken($color, 20%);
+@mixin moreButton ($color, $width, $height, $size) {
+    border-radius:5px;
+    border: 2px solid darken($color, 15%);
+    width: $width;
+    height: $height;
+    background-color: $color;
+    color: #fff;
+    line-height: $height;
+    text-align:center;
+    text-shadow: 1px 1px 0px #333;
+    font-family: arial;
+    font-weight:bold;
+    font-size: $size;
+    margin-bottom: 10px;
 }
-$calloutBG: #EEE;
-$divCenter: 0 auto;
-$siteOrange: rgb(242,187,118);
+.green-more-button {
+    @include moreButton(#2E8B57, 120px, 50px, 21px)
+}
+.blue-more-button {
+    @include moreButton(#4682B4, 100px, 30px, 13px)
+}
 
+// ------------------
 
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+@mixin header ($color, $font)  {
+    height:75px;
+    width:0 auto;
+    background-color: lighten($color, 30%);
+    font-size: 25px;
+    font-family: $font;
+    text-align: center;
+    line-height: 75px;
+    font-color:#fff;
+    border-bottom: 4px solid darken($color, 20%);
+    margin-bottom:10px;
+    color: lighten($color, 70%);
+    text-shadow: 1px 1px 1px #222;
+}
+
+.red-header {
+    @include header(#B22222, serif)
+}
+.blue-header {
+    @include header(#4682B4, sans-serif)
 }
 
 
-@mixin calloutStyle ($color) {
-    background-color: $calloutBG;
-    border-left: 4px solid $color;
-    width: 500px;
-    margin: $divCenter;
-    padding: 15px;
 
-}
-.callout {
-    @include calloutStyle (#ff00ff);
-}
- // --------- menu -----------
-.menu {
-        ul {
-            margin: 0;
-            padding:0;
-            list-style: none;
-            }
 
-        li {
-        display: inline-block;
-        background-color: $siteOrange;   
-            }
 
-        a {
-        display:block;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #000;
 
-        &:hover {
-            background-color: darken($siteOrange, 10%);
 
-        }
-            }
-        }
 
-#{headings()} {
-    font-family: Arial;
-    color: $siteOrange;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
