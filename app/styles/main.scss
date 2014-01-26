@@ -45,21 +45,21 @@
 }
 
 
-@mixin roundimg ($img) {
-    background-image: url($img);
+@mixin roundimg ($img, $ext, $color) {
+    background: url($img + '.' $ext) no-repeat;
     width: 100px;
     height: 100px;
     margin:10px;
     border-radius: 90px;
-    border: 3px solid #8B008B;
-    
-    
+    border: 3px solid $color; 
 }
 
 .img1 {
-    @include roundimg("images/abstract1.jpg");
+    @include roundimg(images/abstract1, jpg, #8B008B);
 }
- 
+.img2 {
+    @include roundimg(images/abstract2, jpg, #000);
+ }
 
 // .hero-unit {
 //     @include button(rgb(232, 2, 76));
