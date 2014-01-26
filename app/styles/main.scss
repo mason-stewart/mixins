@@ -38,40 +38,28 @@
 }
 
 .red-header {
-    @include header(#B22222, serif)
+    @include header(#B22222, serif);
 }
 .blue-header {
-    @include header(#4682B4, sans-serif)
+    @include header(#4682B4, sans-serif);
 }
 
 
+@mixin roundimg ($img) {
+    background-image: url($img);
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border-radius: 90px;
+    border: 3px solid #8B008B;
+    
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.img1 {
+    @include roundimg("imgs/abstract1.jpg");
+}
+ 
 
 // .hero-unit {
 //     @include button(rgb(232, 2, 76));
