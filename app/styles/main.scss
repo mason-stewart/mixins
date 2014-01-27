@@ -59,15 +59,15 @@
 }
 
 .img1 {
-    @include roundimg("../images/cat.jpg", #000, 90px, 90px);
+    @include roundimg("images/cat.jpg", #000, 90px, 90px);
 }
 
 .img2 {
-    @include roundimg("../images/dog.jpg", #8B008B, 100px, 100px);
+    @include roundimg("images/dog.jpg", #8B008B, 100px, 100px);
  }
 
  .img3 {
-    @include roundimg("../images/cat2.jpg", #000, 90px, 90px);
+    @include roundimg("images/cat2.jpg", #000, 90px, 90px);
  }
 
 // .hero-unit {
