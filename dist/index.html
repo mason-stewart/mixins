@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>mixins</title><meta name=description content=""><meta name=viewport content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor.css><link rel=stylesheet href=styles/5599744d.main.css><body><!--[if lt IE 10]>
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>mixins</title><meta name=description content=""><meta name=viewport content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor.css><link rel=stylesheet href=styles/1ca4c11d.main.css><body><!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]--><h2>Mixin Button</h2><div class=green-more-button>More Info</div><div class=blue-more-button>More Details</div><pre>
     @mixin moreButton ($color, $width, $height, $size) {
@@ -45,24 +45,29 @@
     @include header(#4682B4, sans-serif)
 }
     
-</pre><h2>Mixin Background</h2><div class=img1></div><div class=img2></div><pre>
-    
-@mixin roundimg ($img) {
-    background-image: url($img);
-    width: 100px;
-    height: 100px;
-    margin:10px;
-    border-radius: 90px;
-    border: 3px solid #8B008B; 
+</pre><h2>Mixin Background</h2><div class=img1></div><div class=img2></div><div class=img3></div><pre>
+@mixin roundimg ($img, $color, $h, $w) {
+    background: url($img) no-repeat center center;
+    width: $w;
+    height: $h;
+    margin: 10px;
+    border-radius: 60px;
+    border: 3px solid $color; 
+    display: inline-block;
 }
 
 .img1 {
-    @include roundimg(images/abstract1, jpg, #8B008B);
+    @include roundimg("../images/cat.jpg", #000, 90px, 90px);
 }
 
 .img2 {
-    @include roundimg(images/abstract2, jpg, #000);
+    @include roundimg("../images/dog.jpg", #8B008B, 100px, 100px);
  }
+
+ .img3 {
+    @include roundimg("../images/cat2.jpg", #000, 90px, 90px);
+ } 
+
 </pre><!-- <div class="hero-unit">
           <h1>hey this is way easy. Grunt is sooooo nice</h1>
           <p>You now have</p>

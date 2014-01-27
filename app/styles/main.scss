@@ -13,9 +13,11 @@
     font-size: $size;
     margin-bottom: 10px;
 }
+
 .green-more-button {
     @include moreButton(#2E8B57, 120px, 50px, 21px)
 }
+
 .blue-more-button {
     @include moreButton(#4682B4, 100px, 30px, 13px)
 }
@@ -40,25 +42,32 @@
 .red-header {
     @include header(#B22222, serif);
 }
+
 .blue-header {
     @include header(#4682B4, sans-serif);
 }
 
 
-@mixin roundimg ($img, $ext, $color) {
-    background: url($img + '.' $ext) no-repeat;
-    width: 100px;
-    height: 100px;
-    margin:10px;
-    border-radius: 90px;
-    border: 3px solid $color; 
+@mixin roundimg ($img, $color, $h, $w) {
+    background: url($img) no-repeat center center;
+    width: $w;
+    height: $h;
+    margin: 10px;
+    border-radius: 60px;
+    border: 5px solid $color; 
+    display: inline-block;
 }
 
 .img1 {
-    @include roundimg(images/abstract1, jpg, #8B008B);
+    @include roundimg("../images/cat.jpg", #000, 90px, 90px);
 }
+
 .img2 {
-    @include roundimg(images/abstract2, jpg, #000);
+    @include roundimg("../images/dog.jpg", #8B008B, 100px, 100px);
+ }
+
+ .img3 {
+    @include roundimg("../images/cat2.jpg", #000, 90px, 90px);
  }
 
 // .hero-unit {

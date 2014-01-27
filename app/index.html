@@ -95,25 +95,31 @@
 
 <div class="img1"></div>
 <div class="img2"></div>
+<div class="img3"></div>
 
 <pre>
-    
-@mixin roundimg ($img) {
-    background-image: url($img);
-    width: 100px;
-    height: 100px;
-    margin:10px;
-    border-radius: 90px;
-    border: 3px solid #8B008B; 
+@mixin roundimg ($img, $color, $h, $w) {
+    background: url($img) no-repeat center center;
+    width: $w;
+    height: $h;
+    margin: 10px;
+    border-radius: 60px;
+    border: 3px solid $color; 
+    display: inline-block;
 }
 
 .img1 {
-    @include roundimg(images/abstract1, jpg, #8B008B);
+    @include roundimg("../images/cat.jpg", #000, 90px, 90px);
 }
 
 .img2 {
-    @include roundimg(images/abstract2, jpg, #000);
+    @include roundimg("../images/dog.jpg", #8B008B, 100px, 100px);
  }
+
+ .img3 {
+    @include roundimg("../images/cat2.jpg", #000, 90px, 90px);
+ } 
+
 </pre>
 
 
